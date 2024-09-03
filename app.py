@@ -13,7 +13,8 @@ st.title('Employee Performance Analysis')
 st.write('This project focuses on analyzing employee performance within an organization to gain insights into factors affecting performance ratings. This is done by examining a dataset that includes various employee metrics such as environment satisfaction, work-life balance, age, and department.')
 
 # Import dataset 
-df = pd.read_csv("C:\\Users\\mwenj\\OneDrive\\Desktop\\INX\\INX\\processed.csv")
+df = pd.read_csv("processed.csv")
+
 
 
 # Drop specified columns that are not needed for model training
