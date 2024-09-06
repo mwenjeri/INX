@@ -15,8 +15,6 @@ st.write('This project focuses on analyzing employee performance within an organ
 # Import dataset 
 df = pd.read_csv("processed.csv")
 
-
-
 # Drop specified columns that are not needed for model training
 columns_to_drop = ['EmpNumber', 'Gender', 'EmpJobSatisfaction']
 df = df.drop(columns=columns_to_drop, errors='ignore')
@@ -111,11 +109,11 @@ st.write(f"Mean Absolute Error (MAE): {mae}")
 st.write(f"Mean Squared Error (MSE): {mse}")
 st.write(f"R-squared (R²): {r2}")
 
-# Define label encoders for user input
+# Define label encoders for user input, updated to include Data Science and Development
 le_dict = {
     'EducationBackground': LabelEncoder().fit(['Bachelor', 'Master', 'PhD']),
     'MaritalStatus': LabelEncoder().fit(['Single', 'Married']),
-    'EmpDepartment': LabelEncoder().fit(['Sales', 'Research & Development', 'Human Resources']),
+    'EmpDepartment': LabelEncoder().fit(['Sales', 'Research & Development', 'Human Resources', 'Data Science', 'Development']),
     'EmpJobRole': LabelEncoder().fit(['Sales Executive', 'Research Scientist', 'Healthcare Representative']),
     'BusinessTravelFrequency': LabelEncoder().fit(['Non-Travel', 'Travel_Rarely', 'Travel_Frequently']),
     'OverTime': LabelEncoder().fit(['Yes', 'No']),
